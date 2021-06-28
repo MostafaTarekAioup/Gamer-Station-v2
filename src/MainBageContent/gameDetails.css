@@ -1,0 +1,345 @@
+.game-info-container {
+  background-color: rgb(33 29 29);
+}
+.game-header-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+.game-header-container {
+  width: 100%;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.game-info-header {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(24, 23, 23, 0.788);
+  text-align: center;
+}
+.game-info-header h1 {
+  font-size: 4vw;
+  margin-top: 20vh;
+  color: white;
+  text-shadow: 5px 5px 20px white;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+.game-info-header h2 {
+  font-size: 4vw;
+  margin-top: 20px;
+  color: tomato;
+  text-shadow: 5px 5px 20px tomato;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.apout-game {
+  margin-top: 20px;
+  color: #fff;
+  text-shadow: 5px 5px 20px white;
+  padding: 10px;
+}
+.show-btn {
+  border-color: transparent;
+  background-color: transparent;
+  color: tomato;
+  cursor: pointer;
+  font-size: 20px;
+  text-shadow: 5px 5px 20px tomato;
+}
+.show-btn:hover {
+  color: rgb(243, 58, 26);
+  text-shadow: 5px 5px 20px rgb(235, 45, 11);
+}
+.game-Gallary {
+  width: 100%;
+  max-height: 100vh;
+}
+.more-gameInfo {
+  text-align: left;
+  padding: 10px;
+  position: relative;
+  margin-bottom: 60px;
+}
+.more-gameInfo h3 {
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  text-shadow: 5px 5px 20px white;
+}
+.brogress-bar {
+  background-color: rgba(0, 0, 0, 0.623);
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-radius: 10px;
+  /* overflow-x: hidden; */
+  margin-top: 20px;
+}
+.brogress-bar div:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  /* position: relative; */
+}
+.brogress-bar div:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.game-rate-title {
+  font-weight: 500 !important;
+  padding: 10px !important;
+}
+.exceptional {
+  background-image: linear-gradient(180deg, #b4ec51, #429321);
+  padding: 20px;
+  text-align: left;
+  color: rgb(19, 18, 18);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.rate-after:hover::after {
+  content: attr(data-after-content);
+  width: fit-content;
+  padding: 5px;
+  margin: auto;
+  bottom: -50px;
+  left: 40%;
+  z-index: 2;
+  position: absolute;
+  background-image: linear-gradient(180deg, #b4ec51, #429321);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  box-shadow: 2px 2px 30px #429321;
+  text-align: center;
+  text-transform: capitalize;
+}
+.exceptional:hover::after {
+  background-image: linear-gradient(180deg, #b4ec51, #429321);
+  box-shadow: 2px 2px 30px #429321;
+}
+.exceptional:hover {
+  box-shadow: 2px 2px 30px #429321;
+}
+.recommended {
+  background-image: linear-gradient(0deg, #4354b9, #649bff);
+  padding: 20px;
+  cursor: pointer;
+  text-align: left;
+}
+.recommended:hover {
+  box-shadow: 2px 2px 30px #649bff;
+}
+.recommended:hover::after {
+  background-image: linear-gradient(0deg, #4354b9, #649bff);
+  box-shadow: 2px 2px 30px #649bff;
+}
+.meh {
+  background-image: linear-gradient(180deg, #fad961, #f76b1c);
+  padding: 20px;
+  cursor: pointer;
+  text-align: left;
+}
+.meh:hover {
+  box-shadow: 2px 2px 30px #f76b1c;
+}
+.meh:hover::after {
+  background-image: linear-gradient(180deg, #fad961, #f76b1c);
+  box-shadow: 2px 2px 30px #f76b1c;
+}
+.skip {
+  background-image: linear-gradient(180deg, #ff5764, #f11a2a);
+  padding: 20px;
+  cursor: pointer;
+  text-align: left;
+}
+.skip:hover {
+  box-shadow: 2px 2px 30px #f11a2a;
+}
+.skip:hover::after {
+  content: attr(data-after-content);
+  background-image: linear-gradient(180deg, #ff5764, #f11a2a);
+  box-shadow: 2px 2px 30px #f11a2a;
+}
+
+.game-specific-details-container {
+  width: 100%;
+  min-height: calc(100vh - 45px);
+  background-color: rgb(48, 45, 45);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 10px;
+}
+.Specific-details {
+  padding: 10px;
+  padding-left: 20px;
+  margin-top: 20px;
+  line-height: 40px;
+}
+.Specific-details p {
+  color: white;
+  font-size: 20px;
+  width: 100%;
+}
+.Specific-details p span {
+  color: tomato;
+}
+.Specific-details p span a {
+  text-decoration: none;
+  color: tomato;
+}
+.game-img {
+  width: 100%;
+  height: 100%;
+}
+.game-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-attachment: fixed;
+}
+.genre-tag {
+  background-color: tomato;
+  color: white !important;
+  width: fit-content;
+  padding: 4px;
+  margin: 2px;
+  font-size: 18px;
+  border-radius: 5px;
+  display: inline-block;
+  line-height: 20px;
+}
+.requermints h4 {
+  font-size: 30px;
+  color: white;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: tomato;
+  margin-top: 10px;
+  align-items: center;
+  display: flex;
+}
+.requermints h4:hover {
+  color: rgb(243, 42, 7);
+}
+.game-requermints {
+  display: none;
+}
+.game-requermints-active {
+  display: block;
+}
+/* /// swiper styling  */
+
+.screen-shots {
+  max-width: 100vw;
+  margin: auto;
+  height: calc(100vh - 60px);
+  bottom: 0;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+/* //// end swiper Styling  */
+
+/* media query  */
+
+@media only screen and (max-width: 720px) {
+  .game-header-container {
+    background-size: fill;
+    background-position: center;
+  }
+  .game-info-header h1 {
+    font-size: 7vw;
+  }
+  .game-info-header h2 {
+    font-size: 7vw;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .screen-shots {
+    max-width: 100%;
+    margin: auto;
+    height: 100%;
+    bottom: 0;
+  }
+  .trailer-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .borgress-details {
+    font-size: 16px;
+    gap: 10px;
+  }
+  .rate-after:hover::after {
+    content: attr(data-after-content);
+    left: 10%;
+  }
+  .game-specific-details-container {
+    grid-template-columns: 1fr;
+  }
+  .Specific-details {
+    padding: 5px;
+  }
+  .Specific-details p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .genre-tag {
+    font-size: 3vw;
+  }
+}

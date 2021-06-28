@@ -1,0 +1,123 @@
+.favorits-content-container {
+  background-image: url(../Images/bg-3.webp);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  background-position: center;
+}
+.favorits-Header {
+  width: 100%;
+  letter-spacing: 10px;
+  font-weight: 600;
+  font-size: 40px;
+  font-family: sans-serif;
+  text-align: center;
+  color: aliceblue;
+  text-shadow: 4px 4px 10px white;
+}
+.about-container {
+  background-image: url(../Images/landing-page-images/landing-page-2.webp);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+}
+.about-container h1 {
+  font-size: 40px;
+  color: aliceblue;
+  text-shadow: 5px 5px 20px white;
+  font-weight: 500;
+}
+.about-container .game-logo {
+  color: tomato;
+}
+.about-content-container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(20, 19, 19, 0.616);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.about-content p {
+  color: white;
+  font-size: 20px;
+  line-height: 40px;
+}
+.about-content p a {
+  text-decoration: none;
+  color: tomato;
+}
+.external-link {
+  color: tomato;
+  font-size: 15px;
+  margin-left: 5px;
+}
+.developer-contact {
+  margin: 10px;
+  font-size: 25px;
+  display: inline-block;
+  color: white !important;
+}
+.developer-contact:hover {
+  color: rgb(248, 39, 2) !important;
+  transform: scale(1.2);
+}
+.developer-name {
+  color: tomato;
+}
+.favorits-buttons-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.type-btn {
+  border-color: transparent;
+  width: fit-content;
+  padding: 5px;
+  font-size: 20px;
+  text-transform: capitalize;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.type-icon {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.type-btn:hover {
+  background-color: tomato;
+  color: white;
+}
+.type-btn-active {
+  background-color: tomato;
+  color: white;
+}
+.icon-type-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+  .about-container h1 {
+    font-size: 8vw;
+  }
+  .type-btn {
+    width: 100%;
+  }
+}

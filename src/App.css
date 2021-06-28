@@ -1,38 +1,287 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cards-container {
+  max-width: 1920px;
+  padding: 40px;
+  margin: auto;
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.game-card {
+  box-shadow: 5px 5px 10px gray;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.game-card:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+.loading {
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-size: 50px;
+}
+.game-image {
+  width: 100%;
+  height: 300px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
+}
+.game-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.rate-details {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: fit-content;
+  height: fit-content;
+  z-index: 2;
+}
+.details-btn {
+  text-decoration: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.game-details-icon {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(36, 35, 35, 0.603);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  color: white;
+  font-size: 40px;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.game-details-icon-active {
+  transform: scale(1);
+  opacity: 1;
+}
+.search-icon {
+  text-decoration: none;
+  color: white;
+}
+.streatch-up-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white;
+  transform: rotateZ(45deg);
+  font-size: 20px;
+}
+.streatch-up-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: white;
+  transform: rotateZ(136deg);
+  font-size: 20px;
+}
+.streatch-down-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: white;
+  transform: rotateZ(316deg);
+  font-size: 20px;
+}
+.streatch-down-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: white;
+  transform: rotateZ(226deg);
+  font-size: 20px;
+}
+.search-icon:hover {
+  color: tomato;
+}
+.details {
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.details h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.btn {
+  border-color: transparent;
+  padding: 10px;
+  border-radius: 5px;
+}
+.main-Content {
+  max-width: 1920;
+  margin: auto;
+}
+.favorits-main-Content {
+  width: 100%;
+  margin: auto;
+  min-height: 100vh;
+  background-color: rgba(12, 11, 11, 0.774);
+}
+.next-container {
+  display: grid;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.load-more-btn {
+  font-size: 20px;
+  letter-spacing: 5px;
+  font-weight: 600;
+  background-color: rgb(252, 54, 19);
+  color: white;
+}
+.load-more-btn:hover {
+  cursor: pointer;
+  background-color: rgb(252, 84, 55);
+}
+.favorit {
+  padding: 10px;
+  background-color: rgba(22, 20, 20, 0.849);
+  display: inline-block;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+}
+.fav-active {
+  transform: translateX(0);
+}
+.fav-icon {
+  font-size: 30px;
+  border-radius: 5px;
+}
+.fav-icon:hover {
+  color: tomato;
+  cursor: pointer;
+}
+.fav-icon-active {
+  color: tomato;
+}
+.fav-count-submenu {
+  background-color: tomato;
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  border-radius: 50%;
+  color: white;
+}
+.favorit-container-submenu {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.icons {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+.to-top-page {
+  font-size: 25px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: tomato;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  z-index: 99;
+}
+.to-top-page:hover {
+  background-color: rgb(252, 38, 0);
+}
+.to-top-page-active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.game-rate {
+  color: white;
+  background-color: tomato;
+  border-radius: 5px;
+  padding: 5px;
+}
+.main-Discover-content {
+  background-image: url(./Images/landing-page-images/landing-page-2.webp);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  background-position: center;
+}
+.discover-content {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(12, 12, 12, 0.842);
+}
+/* scrol par style  */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: tomato;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(243, 46, 11);
+}
+@media only screen and (max-width: 480px) {
+  .cards-container {
+    padding: 10px;
   }
 }
